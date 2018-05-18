@@ -111,7 +111,8 @@ class Datatables {
         }
 
         $search = array();
-        $searchinput = preg_replace("/[^\wá-žÁ-Ž]+/", " ", $searchinput);
+	// Fix chinese search error
+        // $searchinput = preg_replace("/[^\wá-žÁ-Ž]+/", " ", $searchinput);
         foreach (explode(' ', $searchinput) as $word)
         {
             $lookfor = array();
